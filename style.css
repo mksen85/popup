@@ -10,11 +10,18 @@
     padding: 20px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(190, 232, 232);}
+
 .menu_list{
-    display: flex;
-    justify-content: end;
-    padding: 10px;
-    font-size: 20px;
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
   }
   
   .menu a{
@@ -22,7 +29,8 @@
   }
 
   .menu_link{
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .menu_list li{
@@ -37,7 +45,17 @@
     display: none;
     position: absolute;
     top: 50px;
-    color: black;
+    background-color: aliceblue;
+  }
+  .submenu_container{
+    display: grid;
+    padding: 10px;
+    width: 200px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4fr);
+    grid-template-rows: repeat(4fr);
+  }
+  .submenu_link{
   }
 
   input.popupbutton:checked ~ ul{
@@ -45,4 +63,21 @@
   position: relative;
   max-height: 5000px;
 
+ }
+
+ .popupbutton{
+  appearance: none;
+ }
+
+ .checkbox{
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-image: url(./img/popup-button.png);
+ }
+
+ .button_more{
+  display: grid;
+  width: 1fr;
+  grid-column: span 3;
  }
